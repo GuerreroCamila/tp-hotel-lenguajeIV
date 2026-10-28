@@ -1,0 +1,47 @@
+.hero { min-height: 630px; position: relative; display: flex; align-items: center; overflow: hidden; background: #30382f; color: #fff; }
+.hero-image, .hero-overlay { position: absolute; inset: 0; }
+.hero-image { background-image: url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=2000&q=90"); background-size: cover; background-position: center 55%; transform: scale(1.01); }
+.hero-overlay { background: linear-gradient(90deg, rgba(24,30,24,.82) 0%, rgba(24,30,24,.58) 48%, rgba(24,30,24,.1) 100%); }
+.hero-content { position: relative; z-index: 1; padding-top: 50px; padding-bottom: 70px; }
+.hero-eyebrow { color: #e3c797; }
+.hero h1 { max-width: 760px; color: #fff; }
+.hero h1 em { color: #e2c796; }
+.hero-description { max-width: 500px; color: rgba(255,255,255,.82); font-size: 1.05rem; margin-bottom: 30px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-note { position: absolute; right: 5%; bottom: 35px; z-index: 1; color: #fff; font-size: .78rem; letter-spacing: .06em; }
+.hero-note span { display: inline-block; width: 28px; height: 1px; background: #d7b77f; vertical-align: middle; margin-right: 10px; }
+.intro-section { background: var(--cream); }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; }
+.intro-grid h2 { margin-bottom: 0; }
+.intro-copy p { max-width: 540px; margin-bottom: 24px; }
+.services-section { background: #fff; }
+.services-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin-top: 48px; }
+.service-item { padding: 28px 22px; border: 1px solid var(--line); }
+.service-icon { display: inline-grid; place-items: center; width: 44px; height: 44px; color: var(--gold-dark); border: 1px solid #d8c5a4; font-size: 1.5rem; margin-bottom: 22px; }
+.service-item h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
+.service-item p { font-size: .88rem; margin-bottom: 0; }
+.home-rooms-section { background: #f9f7f3; }
+.rooms-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.room-card { background: #fff; border: 1px solid var(--line); min-width: 0; }
+.room-image-wrap { height: 240px; position: relative; overflow: hidden; background: var(--sand); }
+.room-image { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.room-card:hover .room-image { transform: scale(1.04); }
+.room-capacity { position: absolute; left: 14px; bottom: 14px; background: rgba(255,255,255,.93); padding: 5px 9px; font-size: .72rem; color: var(--ink); }
+.room-card-content { padding: 22px; }
+.room-card-title-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.room-card h3 { font-family: var(--serif); font-size: 1.22rem; font-weight: 500; margin-bottom: 12px; }
+.room-price { color: var(--gold-dark); font-weight: 700; font-size: .9rem; text-align: right; white-space: nowrap; }
+.room-price small { display: block; font-size: .7rem; color: var(--muted); font-weight: 400; }
+.room-card-content > p { font-size: .85rem; min-height: 70px; }
+.room-meta { font-size: .79rem; color: var(--muted); margin-bottom: 13px; }
+.room-service-list { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; padding: 0; margin: 0 0 20px; }
+.room-service-list li { background: var(--cream); padding: 4px 8px; color: #5e625a; font-size: .7rem; }
+.room-button { width: 100%; }
+.centered-action { text-align: center; margin-top: 38px; }
+.home-cta { padding: 65px 0; background: var(--green); color: #fff; }
+.home-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.home-cta h2 { margin-bottom: 0; color: #fff; }
+.home-cta h2 em { color: #dfc18d; }
+.home-cta .eyebrow { color: #dfc18d; }
+@media (max-width: 900px) { .rooms-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .intro-grid { gap: 40px; } }
+@media (max-width: 620px) { .hero { min-height: 570px; } .hero-note { display: none; } .hero-actions { align-items: stretch; flex-direction: column; max-width: 280px; } .intro-grid { grid-template-columns: 1fr; gap: 22px; } .rooms-grid, .services-grid { grid-template-columns: 1fr; } .home-cta-inner { align-items: flex-start; flex-direction: column; } .room-card-content > p { min-height: auto; } }

@@ -1,0 +1,5 @@
+.rooms-banner { background: linear-gradient(110deg, #f7f4ee 0%, #f7f4ee 62%, #eee6d9 62%, #eee6d9 100%); }
+.rooms-page-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+.rooms-page-grid .room-image-wrap { height: 300px; }
+.rooms-page-grid .room-card-content > p { min-height: auto; }
+@media (max-width: 720px) { .rooms-page-grid { grid-template-columns: 1fr; } .rooms-page-grid .room-image-wrap { height: 245px; } }
